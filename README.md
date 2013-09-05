@@ -1,4 +1,4 @@
-gatineau
+Gatineau Base
 ========
 
-Gatineau is a premium Wordpress theme
+Gatineau Base is the base HTML of the several Gatineau themes for Anchor CMS, Koken and Wordpress.
