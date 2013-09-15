@@ -76,8 +76,7 @@ Version: 2.0
 @color-social-google: #db4a39;
 
 // Font stacks
-@font-default:;
-@font-basic: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+@font-default: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;;
 //@font-icons: "Cocoriko Icons";
 
 // Media Devices
@@ -115,11 +114,11 @@ a {
 	}
 
 	&:hover {
-		color: lighten(inherit, 20%);
+		color: lighten(@color-accent, 20%);
 	}
 
 	&:active {
-		color: darken(inherit, 20%);
+		color: darken(@color-accent, 20%);
 	}
 }
 
@@ -172,8 +171,30 @@ blockquote {
 // Navigation Modules
 // -----------------------------------------------------------------------------
 
-nav#primary-navigation, nav#secondary-navigation {
+nav.page-navigation {
 	width: 100%;
-	background: @color-type-light;
-	padding: 2%;
+	padding: 1em;
+	position: fixed;
+	top:0;
+
+	background: @color-light;
+
+	a:link {
+		color:@color-type;
+		text-decoration: none;
+	}
+
+	ul {
+		margin:0;
+		padding:0;
+
+		li {
+			margin:0;
+			padding:0;
+		}
+	}
+}
+
+nav.page-navigation.is-hidden {
+	left:-100%;
 }

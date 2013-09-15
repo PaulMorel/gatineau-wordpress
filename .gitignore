@@ -16,3 +16,4 @@ sitemap.xml.gz
 .vagrant
 *.sublime-project
 *.sublime-workspace
+*.sublime-build
