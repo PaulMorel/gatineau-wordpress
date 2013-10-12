@@ -335,11 +335,66 @@ html[lang="en"] blockquote {
 html[lang="fr"] blockquote {
   quotes: "« " " »" "‹ " " ›";
 }
-nav.page-navigation {
+section.layout-sidebar {
   width: 100%;
-  padding: 1em;
   position: fixed;
   top: 0;
+}
+section.layout-sidebar.is-hidden {
+  left: -100%;
+}
+@media only screen and (min-width: 31em) {
+  section.layout-sidebar {
+    width: 20em;
+  }
+}
+section.layout-grid ul {
+  width: 100%;
+  *zoom: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+section.layout-grid ul:before,
+section.layout-grid ul:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+section.layout-grid ul:after {
+  clear: both;
+}
+section.layout-grid ul li {
+  width: 48%;
+  margin: 0 0 1em 1em;
+  display: block;
+  float: left;
+  overflow: hidden;
+}
+section.layout-grid ul li:nth-child(2n+1) {
+  margin: 0 0 1em 0;
+}
+section.layout-grid ul li a {
+  height: 200px;
+  display: block;
+  background: #f00;
+}
+section.layout-main {
+  width: 100%;
+  padding: 1em;
+}
+@media only screen and (min-width: 31em) {
+  section.layout-main {
+    margin: 0 0 0 20em;
+    width: 20em;
+    padding: 2em;
+  }
+}
+nav.page-navigation {
+  padding: 1em;
   background: #ffffff;
 }
 nav.page-navigation a:link {
@@ -353,7 +408,4 @@ nav.page-navigation ul {
 nav.page-navigation ul li {
   margin: 0;
   padding: 0;
-}
-nav.page-navigation.is-hidden {
-  left: -100%;
 }
