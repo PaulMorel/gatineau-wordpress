@@ -1,0 +1,13 @@
+{
+  "name": "gatineau-base",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaulMorel/gatineau-base.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-less": "^0.11.0"
+  }
+}
